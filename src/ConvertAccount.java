@@ -1,5 +1,10 @@
 class ConvertAccount extends BankAccount {
     private double balance;
+
+    public String getCurrency() {
+        return currency;
+    }
+
     private String currency;
     private Converter converter;
 
@@ -11,6 +16,7 @@ class ConvertAccount extends BankAccount {
     }
 
     public void deposit(double amount) {
+
         balance += amount;
         System.out.println("Deposit made. Current balance: " + balance + " " + currency);
     }
@@ -28,7 +34,7 @@ class ConvertAccount extends BankAccount {
 
     public void convertToCurrency(double amount, String targetCurrency) {
         double convertedAmount = converter.convert(amount, currency, targetCurrency);
-        balance -= amount;
+        balance += amount;
         System.out.println("Conversion made. Amount converted: " + amount + " " + currency +
                 " to " + convertedAmount + " " + targetCurrency + ". Current balance: " + balance + " " + currency);
     }

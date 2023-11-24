@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UserAuthentication userAuth = new UserAuthentication();
-        CheckingAccount checkingAccount = new CheckingAccount(0,"USD");
+        /*CheckingAccount checkingAccount = new CheckingAccount(0,"USD");
         SavingsAccount savingsAccount = new SavingsAccount(0);
 
         checkingAccount.deposit(1000);
@@ -27,7 +27,7 @@ public class Main {
 
         System.out.println("Balance in savings account: " + savingsAccount.getBalance());
         System.out.println("Balance in checking account: " + checkingAccount.getBalance());
-
+*/
 
         while (true) {
             System.out.println("Menu:");
